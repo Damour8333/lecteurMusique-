@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Audio Player</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-player">
+        <!-- Playlist Section -->
+        <ul id="playlist" class="playlist">
+            <li data-file="music/bêtes et méchants mastering ville défigurée - 10_10_2023 14.37.mp3">Bêtes et méchants </li>
+            <li data-file="audio/song2.mp3">Chanson 2</li>
+            <li data-file="audio/song3.mp3">Chanson 3</li>
+        </ul>
+
+        <!-- Currently Playing Song -->
+        <h2 id="current-song">Aucune chanson en cours</h2>
+
+        <!-- Audio controls -->
+        <div class="controls">
+            <button id="prev-btn" class="btn">⏮ Précédent</button>
+            <button id="play-btn" class="btn">▶️ Lecture</button>
+            <button id="pause-btn" class="btn">⏸ Pause</button>
+            <button id="next-btn" class="btn">⏭ Suivant</button>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <span id="current-time">00:00</span>
+            <input type="range" id="progress-bar" min="0" max="100" value="0">
+            <span id="total-duration">00:00</span>
+        </div>
+    </div>
+
+    <!-- Link to Howler.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
